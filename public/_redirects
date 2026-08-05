@@ -1,0 +1,8 @@
+# TODO: Once the real domain is confirmed (placeholder: senseisqueegee.co.nz),
+# add www/http → https non-www redirects here, e.g.:
+# http://senseisqueegee.co.nz/*         https://senseisqueegee.co.nz/:splat  301!
+# https://www.senseisqueegee.co.nz/*    https://senseisqueegee.co.nz/:splat  301!
+# http://www.senseisqueegee.co.nz/*     https://senseisqueegee.co.nz/:splat  301!
+
+# SPA fallback for React Router
+/*    /index.html   200

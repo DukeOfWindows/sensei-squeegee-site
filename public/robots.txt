@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# TODO: Replace with the real domain once confirmed (placeholder below)
+Sitemap: https://senseisqueegee.co.nz/sitemap.xml
