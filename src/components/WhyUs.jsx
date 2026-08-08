@@ -14,9 +14,9 @@ export default function WhyUs() {
     {
       icon: iconLocal,
       alt: 'Local shield icon',
-      title: 'Local to Flagstaff',
+      title: 'Local to Hamilton',
       description:
-        'Based in Flagstaff and servicing surrounding Hamilton suburbs. Your neighbourhood window sensei.', // TODO: confirm suburb list
+        'Based in Flagstaff and servicing all of Hamilton. Your neighbourhood window sensei.',
     },
     {
       icon: iconWindow,
@@ -37,7 +37,7 @@ export default function WhyUs() {
       alt: 'Gear icon',
       title: 'The right tools for the job',
       description:
-        'Professional squeegees and window cleaning gear — not a rag and a bucket of hope.', // TODO: confirm actual equipment (e.g. water-fed pole / pure water system) before making specific claims
+        'A pure water cleaning system, commercial-grade squeegees, and telescopic poles — not a rag and a bucket of hope.',
     },
     {
       icon: iconQuote,

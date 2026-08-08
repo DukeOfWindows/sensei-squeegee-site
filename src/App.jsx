@@ -16,7 +16,7 @@ function App() {
     <>
       <HelmetSEO
         pageTitle="Sensei Squeegee | Residential Window Cleaning, Hamilton"
-        metaDescription="Interior and exterior residential window cleaning in Flagstaff and surrounding Hamilton suburbs. Streak-free, sensei-level results — request a free quote."
+        metaDescription="Interior and exterior residential window cleaning, servicing Ngāruawāhia to Te Awamutu. Streak-free, sensei-level results — request a free quote."
         canonicalUrl="https://senseisqueegee.co.nz" // TODO: confirm domain
       />
 
@@ -35,9 +35,8 @@ function App() {
               Hamilton&rsquo;s Window Cleaning Sensei
             </h1>
             <p className="text-base sm:text-lg md:text-xl font-body mb-8 max-w-2xl mx-auto">
-              Interior and exterior residential window cleaning in Flagstaff and surrounding
-              Hamilton suburbs.{/* TODO: confirm suburb list */} One craft, mastered — streak-free
-              glass, every time.
+              Interior and exterior residential window cleaning, servicing Ngāruawāhia to
+              Te Awamutu. One craft, mastered — streak-free glass, every time.
             </p>
             <CTAButton />
           </div>

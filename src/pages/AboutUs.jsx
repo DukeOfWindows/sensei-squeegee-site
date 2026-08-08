@@ -23,7 +23,7 @@ export default function AboutUs() {
     <>
       <HelmetSEO
         pageTitle="About | Sensei Squeegee — Hamilton Window Cleaning"
-        metaDescription="Meet the sensei behind Sensei Squeegee — residential window cleaning for Flagstaff and surrounding Hamilton suburbs, run with dojo-grade discipline."
+        metaDescription="Meet the sensei behind Sensei Squeegee — residential window cleaning servicing Ngāruawāhia to Te Awamutu, run with dojo-grade discipline."
         canonicalUrl="https://senseisqueegee.co.nz/about" // TODO: confirm domain
       />
 
@@ -67,15 +67,37 @@ export default function AboutUs() {
             out those are exactly the qualities you want in the person cleaning your windows, too.
           </p>
           <p className="text-lg font-body mb-4">
-            Sensei Squeegee brings that dojo mindset to residential window cleaning across
-            Flagstaff and surrounding Hamilton suburbs{/* TODO: confirm suburb list */}: one
-            craft, practised properly, with no shortcuts.
+            Sensei Squeegee brings that dojo mindset to window cleaning: one craft, practised
+            properly, with no shortcuts.
           </p>
-          {/* TODO: TO BE CONFIRMED — replace the placeholder below with your brother's real story:
-              his name (if he wants it on the site), how long he's been cleaning windows, the dojo
-              he runs, and anything else he's happy to share. Do not invent details. */}
-          <p className="text-lg font-body italic text-gray-500">
-            [TO BE CONFIRMED: personal story, name, and background — collect from brother]
+          <p className="text-lg font-body mb-4">
+            In 2020, I founded Toatakai Karate in Saint Andrews, Hamilton. Since then, I&rsquo;ve
+            spent my days coaching kids, teenagers, and adults, helping them build confidence,
+            discipline, and achieve their goals — both on and off the mats.
+          </p>
+          <p className="text-lg font-body mb-4">
+            In 2024, I decided to learn a new trade from two people who know it best: my brother,
+            who runs a full-time window cleaning business in Wellington, and my uncle, who does
+            the same in Wanaka. Between them, they have years of experience, and I was fortunate
+            enough to learn the techniques, attention to detail, and professional standards that
+            make the difference between simply washing windows and doing the job properly.
+          </p>
+          <p className="text-lg font-body mb-4">
+            Today, Sensei Squeegee combines those skills with the same values I bring to karate —
+            turning up on time, taking pride in the little details, treating every customer&rsquo;s
+            home with respect, and leaving things better than I found them.
+          </p>
+          <p className="text-lg font-body">
+            Window cleaning also gives me the flexibility to continue coaching athletes as they
+            represent New Zealand around the world. You can check out our karate club at{' '}
+            <a
+              href="https://www.toatakaikarate.co.nz/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sensei-blue hover:underline"
+            >
+              toatakaikarate.co.nz
+            </a>.
           </p>
         </motion.section>
 

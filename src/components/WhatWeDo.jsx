@@ -24,13 +24,6 @@ export default function WhatWeDo() {
         'Careful, tidy work inside your home — fingerprints, smudges and dust dealt to, with total respect for your space.',
       link: '/window-cleaning',
     },
-    {
-      label: 'The Full Kata: Inside + Out',
-      icon: windowIcon,
-      description:
-        'The complete treatment. Both sides of every pane, so your glass practically disappears. This is the way.',
-      link: '/window-cleaning',
-    },
   ];
 
   return (
@@ -50,8 +43,7 @@ export default function WhatWeDo() {
 
           <p className="font-body text-gray-700 mb-6">
             We don&rsquo;t do gutters, roofs, or house washing. We do windows — interior and
-            exterior, for homes in Flagstaff and surrounding Hamilton suburbs
-            {/* TODO: confirm suburb list with brother */} — and we do them properly.
+            exterior, for homes in Hamilton — and we do them properly.
           </p>
 
           <motion.div

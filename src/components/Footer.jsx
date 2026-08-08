@@ -1,6 +1,7 @@
 import React from 'react';
 import CTAButton from './CTAButton';
 import { Link } from 'react-router-dom';
+import logo from '../images/sensei-squeegee-logo.png';
 
 export default function Footer() {
   return (
@@ -9,10 +10,11 @@ export default function Footer() {
 
         {/* Logo + CTA */}
         <div>
-          {/* TODO: Replace with the real Sensei Squeegee logo image once supplied */}
-          <p className="font-heading text-2xl text-sensei-dark mb-1">
-            Sensei <span className="text-belt-red">Squeegee</span>
-          </p>
+          <img
+            src={logo}
+            alt="Sensei Squeegee — Hamilton residential window cleaning logo"
+            className="h-32 w-auto mb-3"
+          />
           <p className="font-cursive text-sensei-blue mb-4">Wax on. Grime off.</p>
           <CTAButton className="text-sm px-4 py-2" />
         </div>
@@ -43,10 +45,19 @@ export default function Footer() {
             Contact Us
           </h4>
           <ul className="space-y-1 text-gray-700">
-            {/* TODO: Replace with real phone/email once confirmed — do not ship "TO BE CONFIRMED" */}
-            <li>Phone: <span className="italic">TO BE CONFIRMED</span></li>
-            <li>Email: <span className="italic">TO BE CONFIRMED</span></li>
-            <li>Servicing Flagstaff &amp; surrounding Hamilton suburbs{/* TODO: confirm suburb list */}</li>
+            <li>
+              Phone:{' '}
+              <a href="tel:+64272028687" className="text-sensei-blue hover:underline">
+                027 202 8687
+              </a>
+            </li>
+            <li>
+              Email:{' '}
+              <a href="mailto:barney@senseisqueegee.co.nz" className="text-sensei-blue hover:underline">
+                barney@senseisqueegee.co.nz
+              </a>
+            </li>
+            <li>Servicing Ngāruawāhia to Te Awamutu.</li>
             {/* TODO: Add Google Business Profile + social links once set up */}
           </ul>
         </div>

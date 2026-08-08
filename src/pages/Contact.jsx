@@ -18,7 +18,7 @@ export default function Contact() {
     <>
       <HelmetSEO
         pageTitle="Contact & Free Quotes | Sensei Squeegee — Hamilton Window Cleaning"
-        metaDescription="Request a free window cleaning quote from Sensei Squeegee. Interior and exterior residential window cleaning in Flagstaff and surrounding Hamilton suburbs."
+        metaDescription="Request a free window cleaning quote from Sensei Squeegee. Interior and exterior residential window cleaning, servicing Ngāruawāhia to Te Awamutu."
         canonicalUrl="https://senseisqueegee.co.nz/contact" // TODO: confirm domain
       />
 
@@ -49,10 +49,19 @@ export default function Contact() {
           <p className="text-lg max-w-2xl mx-auto">
             Quick question or ready for a quote? Fill in the form below, or get in touch directly.
           </p>
-          {/* TODO: Replace with real phone/email once confirmed — do not ship "TO BE CONFIRMED" */}
           <div className="space-y-1">
-            <p><span className="font-semibold">Phone:</span> <span className="italic">TO BE CONFIRMED</span></p>
-            <p><span className="font-semibold">Email:</span> <span className="italic">TO BE CONFIRMED</span></p>
+            <p>
+              <span className="font-semibold">Phone:</span>{' '}
+              <a href="tel:+64272028687" className="text-sensei-blue hover:underline">
+                027 202 8687
+              </a>
+            </p>
+            <p>
+              <span className="font-semibold">Email:</span>{' '}
+              <a href="mailto:barney@senseisqueegee.co.nz" className="text-sensei-blue hover:underline">
+                barney@senseisqueegee.co.nz
+              </a>
+            </p>
           </div>
         </div>
       </motion.section>
@@ -84,9 +93,8 @@ export default function Contact() {
             Where We Work
           </h2>
           <p className="text-base leading-relaxed">
-            {/* TODO: Replace with the confirmed suburb list from brother */}
-            We service <strong>Flagstaff and surrounding Hamilton suburbs</strong>. Not sure if
-            you&rsquo;re in range? Ask — the sensei is reasonable.
+            We service <strong>Ngāruawāhia to Te Awamutu</strong>. Not sure if you&rsquo;re in
+            range? Ask — the sensei is reasonable.
           </p>
           {/* TODO: Add a Hamilton service-area map here once the suburb list is confirmed
               (e.g. a Google My Maps embed created for Sensei Squeegee — do NOT reuse maps

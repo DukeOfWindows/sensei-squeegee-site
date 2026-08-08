@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Local staging folders from Claude file transfers — never commit
+_to_delete/
+_to_delete_2/
+*.tar.gz

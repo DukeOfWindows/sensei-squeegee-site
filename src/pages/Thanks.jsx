@@ -2,6 +2,7 @@ import React from 'react';
 import HelmetSEO from '../components/HelmetSEO';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import logo from '../images/sensei-squeegee-logo.png';
 
 export default function Thanks() {
   return (
@@ -20,10 +21,7 @@ export default function Thanks() {
           Your message has been received — the sensei bows in gratitude. We&rsquo;ll be in touch
           shortly to talk windows.
         </p>
-        {/* TODO: Add the Sensei Squeegee logo here once supplied */}
-        <p className="font-heading text-3xl text-sensei-dark mt-10">
-          Sensei <span className="text-belt-red">Squeegee</span>
-        </p>
+        <img src={logo} alt="Sensei Squeegee logo" className="w-40 mt-10" />
       </main>
       <Footer />
     </>

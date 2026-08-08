@@ -18,8 +18,8 @@ import allTestimonials from '../data/testimonialsData';
 import heroWindow from '../images/exterior-window-cleaning.webp';
 import exteriorImg from '../images/window-cleaning-before-after.webp';
 import interiorImg from '../images/interior-window-cleaning.webp';
+import purewaterImg from '../images/tools/pure-water-system-window-cleaning.webp';
 import squeegeeImg from '../images/tools/residential-squeegee-tool.webp';
-import clothImg from '../images/tools/microfibre-cloth-detailing.webp';
 import poleImg from '../images/tools/reach-pole-glass-cleaning.webp';
 import windowIcon from '../images/icons/window.png';
 import sunIcon from '../images/icons/sun.png';
@@ -35,16 +35,6 @@ export default function WindowCleaning() {
           looking sharp year-round. Interior windows can usually go longer —{' '}
           <strong>every 3–6 months</strong> depending on pets, kids, and what happens in the
           kitchen.
-        </>
-      ),
-    },
-    {
-      question: 'Do you clean both inside and outside?',
-      answer: (
-        <>
-          <strong>Yes — that&rsquo;s the whole service.</strong> Exterior only, interior only, or
-          the full kata: both sides of every pane. Just tell us what you&rsquo;d like when you
-          request a quote.
         </>
       ),
     },
@@ -103,7 +93,7 @@ export default function WindowCleaning() {
     <>
       <HelmetSEO
         pageTitle="Window Cleaning Hamilton | Interior & Exterior | Sensei Squeegee"
-        metaDescription="Interior and exterior residential window cleaning in Flagstaff and surrounding Hamilton suburbs. Streak-free results from your local window cleaning sensei."
+        metaDescription="Interior and exterior residential window cleaning, servicing Ngāruawāhia to Te Awamutu. Streak-free results from your local window cleaning sensei."
         canonicalUrl="https://senseisqueegee.co.nz/window-cleaning" // TODO: confirm domain
       />
 
@@ -113,7 +103,7 @@ export default function WindowCleaning() {
           backgroundImage={heroWindow}
           eyebrow="Residential"
           title="Window Cleaning, Inside & Out"
-          description="From shabby to shiny — interior and exterior window cleaning for homes in Flagstaff and surrounding Hamilton suburbs."
+          description="From shabby to shiny — interior and exterior window cleaning for homes in Hamilton."
         />
 
         <Info
@@ -162,33 +152,32 @@ export default function WindowCleaning() {
           ]}
         />
 
-        {/* TODO: Confirm actual equipment with brother before launch — descriptions below are
-            kept deliberately generic. If he uses a water-fed pole / pure water system, this is
-            the place to say so. Images are placeholders from the layout template. */}
+        {/* TODO: Photos are placeholders from the layout template — brother will swap in his own
+            photos later. Keep filenames lowercase-with-hyphens when replacing. */}
         <ToolboxSection
           title="Tools of the Trade"
           subtitle="Not your neighbour's hose and newspaper trick."
           items={[
             {
+              image: purewaterImg,
+              alt: 'Pure water cleaning system (placeholder image)',
+              title: 'Pure Water Cleaning System',
+              description:
+                'Our deionised water system filters out all minerals and impurities — down to the microscopic level. The result? Spotless, streak-free windows that dry naturally without a single mark. No soaps, no chemicals — just science.',
+            },
+            {
               image: squeegeeImg,
               alt: 'Professional window squeegee (placeholder image)',
               title: 'Professional Squeegees',
               description:
-                'Commercial-grade squeegees and scrubbers, wielded with sensei-level technique for a streak-free finish on every swipe.',
-            },
-            {
-              image: clothImg,
-              alt: 'Lint-free detailing cloths (placeholder image)',
-              title: 'Detailing Cloths',
-              description:
-                'Lint-free cloths for frames, edges, and final touch-ups — no lint, no smears, just shine.',
+                'On our belts: a full toolkit of commercial-grade squeegees, scrubbers, and detailing gear. In our hands: lightning-fast technique. We combine precision, speed, and elbow grease to leave every window crystal clear, inside and out.',
             },
             {
               image: poleImg,
-              alt: 'Extension pole for high windows (placeholder image)',
-              title: 'Extension Poles',
+              alt: 'Telescopic pole for high windows (placeholder image)',
+              title: 'Telescopic Poles',
               description:
-                'For high and hard-to-reach glass, inside and out — no ladders leaning on your walls.',
+                'Our lightweight, indoor-friendly poles reach high windows and skylights without leaning ladders on your walls or squeezing into tight corners.',
             },
           ]}
         />

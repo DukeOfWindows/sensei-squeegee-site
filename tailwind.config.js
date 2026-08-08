@@ -12,9 +12,9 @@ export default {
         cursive: ['Courgette', 'cursive'],
       },
       colors: {
-        // Sensei Squeegee palette: clean-water blues + a "black belt" red accent
-        'sensei-blue': '#1b9fd8',   // primary — fresh, clean water
-        'sensei-dark': '#0b4f6c',   // deep blue — headings, dark sections
+        // Sensei Squeegee palette — brand colours from the logo
+        'sensei-blue': '#00ADF2',   // light blue (brand)
+        'sensei-dark': '#222544',   // navy (brand) — headings, dark sections
         'belt-red': '#b3202c',      // accent — CTAs, underlines (the red belt)
         'off-white': '#eef6fa',     // light section background
       },
