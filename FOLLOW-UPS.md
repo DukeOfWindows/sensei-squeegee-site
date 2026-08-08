@@ -13,11 +13,11 @@ to find them all.
 - [x] Service area — "Ngāruawāhia to Te Awamutu" (site-wide)
 - [x] About page story (Toatakai Karate, 2024 trade apprenticeship, values) + link to toatakaikarate.co.nz
 - [x] Equipment confirmed — pure water system, professional squeegees, telescopic poles
+- [x] Payment terms — invoiced, due on completion; bank transfer / EFTPOS / cash
 
 ## Still to collect from him
 
 - [ ] **Photos of his actual work/equipment** — current images are placeholders from the layout template, each marked with a TODO comment; he said he'll swap the Tools of the Trade photos himself later (use lowercase-with-hyphens filenames!)
-- [ ] **Payment terms** — FAQ in `WindowCleaning.jsx` (currently "TO BE CONFIRMED")
 - [ ] **Insurance status** — before adding any "fully insured" claim
 - [ ] **Extras** — does he want to offer sticker/paint/hard-water-stain removal as a quoted extra? (FAQ)
 - [ ] **Real testimonials** — `src/data/testimonialsData.js` is intentionally empty; slider hides itself until reviews are added

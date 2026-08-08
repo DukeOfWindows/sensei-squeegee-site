@@ -81,9 +81,8 @@ export default function WindowCleaning() {
       question: 'What are your payment terms?',
       answer: (
         <>
-          {/* TODO: TO BE CONFIRMED with brother — placeholder wording below */}
-          <em>TO BE CONFIRMED</em> — payment terms and accepted methods will be added here once
-          confirmed.
+          The job is <strong>invoiced and payment is due upon completion</strong>. You can pay by{' '}
+          <strong>bank transfer, EFTPOS, or cash</strong> — whichever works best for you.
         </>
       ),
     },
