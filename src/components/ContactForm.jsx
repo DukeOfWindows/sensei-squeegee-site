@@ -1,26 +1,45 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
+// Basin free plan ignores the `_redirect` field (custom redirects are paid), so we
+// submit via fetch() with `Accept: application/json` and redirect client-side instead.
 const BASIN_ENDPOINT = 'https://usebasin.com/f/ceb092f440ab';
-const THANKS_REDIRECT = 'https://senseisqueegee.co.nz/thanks';
 
 export default function ContactForm() {
-  const [filePreviews, setFilePreviews] = useState([]);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState(false);
+  const navigate = useNavigate();
 
-  const handleFilePreview = (e) => {
-    const files = Array.from(e.target.files);
-    setFilePreviews(files);
-  };
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (submitting) return; // belt-and-braces against double submits
+    setSubmitting(true);
+    setError(false);
 
-  const removeFile = (indexToRemove) => {
-    setFilePreviews((prev) => prev.filter((_, index) => index !== indexToRemove));
+    try {
+      const formData = new FormData(e.target);
+      const res = await fetch(BASIN_ENDPOINT, {
+        method: 'POST',
+        headers: { Accept: 'application/json' }, // Basin responds with JSON instead of redirecting
+        body: formData,
+      });
+
+      if (res.ok) {
+        navigate('/thanks');
+      } else {
+        setError(true);
+        setSubmitting(false);
+      }
+    } catch {
+      // Network error / offline
+      setError(true);
+      setSubmitting(false);
+    }
   };
 
   return (
     <form
-      action={BASIN_ENDPOINT}
-      method="POST"
-      encType="multipart/form-data"
-      acceptCharset="UTF-8"
+      onSubmit={handleSubmit}
       className="bg-white p-6 rounded-xl shadow-md space-y-4 max-w-2xl mx-auto"
       id="quote"
     >
@@ -28,8 +47,8 @@ export default function ContactForm() {
         Request a Free Quote
       </h2>
       <p className="text-center text-gray-600 text-sm mb-4">
-        Tell us about your windows — interior, exterior, or the full kata (both) — and
-        we&rsquo;ll get back to you with a free quote.
+        Tell us about your windows — interior, exterior, or both — and we&rsquo;ll get back to
+        you with a free quote.
       </p>
 
       {/* Form Fields */}
@@ -68,55 +87,37 @@ export default function ContactForm() {
         <textarea name="message" required rows="4" placeholder="Roughly how many windows? Single or two-storey? Anything tricky?" className="mt-1 w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-sensei-blue" />
       </label>
 
-      {/* File Upload */}
-      <label className="block text-sm font-medium text-gray-700">
-        Upload Photos (optional)
-        <input
-          type="file"
-          name="attachments[]"
-          multiple
-          accept=".jpg,.jpeg,.png,.pdf"
-          onChange={handleFilePreview}
-          className="mt-1 w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-sensei-blue"
-        />
-        <p className="text-xs text-gray-500 mt-1">Accepted: JPG, PNG, PDF. Max 5MB each.</p>
-      </label>
+      {/* Honeypot — hidden from humans, Basin uses it for spam filtering */}
+      <input
+        type="text"
+        name="_gotcha"
+        tabIndex={-1}
+        autoComplete="off"
+        style={{ display: 'none' }}
+        aria-hidden="true"
+      />
 
-      {/* File Previews */}
-      {filePreviews.length > 0 && (
-        <div className="mt-4 space-y-2">
-          {filePreviews.map((file, index) => (
-            <div key={index} className="text-sm text-gray-700 flex items-center gap-4">
-              {file.type.startsWith('image/') && (
-                <img
-                  src={URL.createObjectURL(file)}
-                  alt={`Preview ${index}`}
-                  className="w-16 h-16 object-cover rounded border"
-                />
-              )}
-              <span className="flex-1 break-words">{file.name}</span>
-              <button
-                type="button"
-                onClick={() => removeFile(index)}
-                className="text-belt-red text-xs font-semibold hover:underline"
-              >
-                Remove
-              </button>
-            </div>
-          ))}
+      {/* Inline error with phone fallback */}
+      {error && (
+        <div
+          role="alert"
+          className="bg-red-50 border border-belt-red text-belt-red rounded-md px-4 py-3 text-sm"
+        >
+          Sorry — something went wrong sending your request. Please try again in a moment, or
+          call us directly on{' '}
+          <a href="tel:+64272028687" className="font-semibold underline">
+            027 202 8687
+          </a>.
         </div>
       )}
-
-      {/* Hidden Fields */}
-      <input type="text" name="_gotcha" style={{ display: 'none' }} />
-      <input type="hidden" name="_redirect" value={THANKS_REDIRECT} />
 
       {/* Submit */}
       <button
         type="submit"
-        className="bg-belt-red text-white font-semibold px-6 py-3 rounded-md hover:bg-sensei-dark transition-colors w-full"
+        disabled={submitting}
+        className="bg-belt-red text-white font-semibold px-6 py-3 rounded-md hover:bg-sensei-dark transition-colors w-full disabled:opacity-60 disabled:cursor-not-allowed"
       >
-        Send Request
+        {submitting ? 'Sending…' : 'Send Request'}
       </button>
     </form>
   );
