@@ -6,9 +6,9 @@ import Footer from '../components/Footer';
 import CTAButton from '../components/CTAButton';
 import WhatWeDo from '../components/WhatWeDo';
 
-// TODO: Placeholder images from the layout template — replace with real photos of your brother
-// (and the dojo connection, if he's happy to show it). Filenames lowercase-with-hyphens.
+// TODO: The hero below is still a placeholder image from the layout template.
 import heroAbout from '../images/contact-hero.webp';
+import barneyPhoto from '../images/barney-from-toatakai-karate.webp';
 import targetIcon from '../images/icons/target.png';
 import heartIcon from '../images/icons/heart.png';
 import shieldIcon from '../images/icons/shield.png';
@@ -62,6 +62,8 @@ export default function AboutUs() {
           <h2 className="text-4xl font-cursive font-bold mb-4 inline-block relative after:block after:w-full after:h-[3px] after:bg-belt-red after:mt-2">
             Why &ldquo;Sensei Squeegee&rdquo;?
           </h2>
+          <div className="md:flex md:items-start md:gap-10">
+            <div className="md:flex-1">
           <p className="text-lg font-body mb-4">
             When you run a karate dojo, people expect discipline, precision, and respect. It turns
             out those are exactly the qualities you want in the person cleaning your windows, too.
@@ -99,6 +101,27 @@ export default function AboutUs() {
               toatakaikarate.co.nz
             </a>.
           </p>
+            </div>
+
+            {/* Portrait: beside the story on desktop, below it on mobile */}
+            <motion.figure
+              className="mt-8 md:mt-2 md:w-2/5 md:shrink-0"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true, amount: 0.3 }}
+            >
+              <img
+                src={barneyPhoto}
+                alt="Barney from Toatakai Karate"
+                loading="lazy"
+                className="w-full rounded-xl shadow-lg object-cover"
+              />
+              <figcaption className="mt-3 text-sm font-body text-gray-600 text-center">
+                Barney — sensei at Toatakai Karate, and your window cleaner.
+              </figcaption>
+            </motion.figure>
+          </div>
         </motion.section>
 
         {/* TODO: "Meet the Team" section removed until real bios/photos exist.
