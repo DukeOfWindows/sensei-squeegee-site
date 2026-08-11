@@ -15,7 +15,7 @@ import allTestimonials from '../data/testimonialsData';
 
 // TODO: All images below are placeholders from the layout template — replace with real
 // Sensei Squeegee photos once supplied. Keep filenames lowercase-with-hyphens.
-import heroWindow from '../images/exterior-window-cleaning.webp';
+import heroWindow from '../images/window-cleaning-hamilton.webp';
 import exteriorImg from '../images/window-cleaning-before-after.webp';
 import interiorImg from '../images/interior-window-cleaning.webp';
 import purewaterImg from '../images/tools/pure-water-system-window-cleaning.webp';
