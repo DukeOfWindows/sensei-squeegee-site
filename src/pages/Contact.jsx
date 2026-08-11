@@ -19,7 +19,7 @@ export default function Contact() {
       <HelmetSEO
         pageTitle="Contact & Free Quotes | Sensei Squeegee — Hamilton Window Cleaning"
         metaDescription="Request a free window cleaning quote from Sensei Squeegee. Interior and exterior residential window cleaning, servicing Ngāruawāhia to Te Awamutu."
-        canonicalUrl="https://senseisqueegee.co.nz/contact" // TODO: confirm domain
+        canonicalUrl="https://senseisqueegee.co.nz/contact"
       />
 
       <Navbar />

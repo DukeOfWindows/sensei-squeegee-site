@@ -17,7 +17,7 @@ function App() {
       <HelmetSEO
         pageTitle="Sensei Squeegee | Residential Window Cleaning, Hamilton"
         metaDescription="Interior and exterior residential window cleaning, servicing Ngāruawāhia to Te Awamutu. Streak-free, sensei-level results — request a free quote."
-        canonicalUrl="https://senseisqueegee.co.nz" // TODO: confirm domain
+        canonicalUrl="https://senseisqueegee.co.nz"
       />
 
       <Navbar />

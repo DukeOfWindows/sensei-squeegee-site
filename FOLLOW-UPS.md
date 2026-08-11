@@ -14,6 +14,8 @@ to find them all.
 - [x] About page story (Toatakai Karate, 2024 trade apprenticeship, values) + link to toatakaikarate.co.nz
 - [x] Equipment confirmed — pure water system, professional squeegees, telescopic poles
 - [x] Payment terms — invoiced, due on completion; bank transfer / EFTPOS / cash
+- [x] Domain — senseisqueegee.co.nz live on Netlify (Cloudflare DNS, DNS-only records)
+- [x] Basin form — endpoint wired in (`usebasin.com/f/ceb092f440ab`); notification → barney@, redirect → /thanks
 
 ## Still to collect from him
 
@@ -24,8 +26,7 @@ to find them all.
 
 ## Still to set up (accounts & services)
 
-- [ ] **Domain name** — placeholder `senseisqueegee.co.nz` used in: `HelmetSEO.jsx`, `ContactForm.jsx` (thanks redirect), `public/sitemap.xml`, `public/robots.txt`, `public/_redirects`, and canonical URLs on each page. (The email address suggests the domain is intended — confirm it's actually registered & pointed at Netlify.)
-- [ ] **Basin account + new form** — replace `REPLACE_WITH_NEW_BASIN_FORM_ID` in `ContactForm.jsx` — **the quote form does not work until this is done**
+- [ ] **Test the live quote form** — one real submission on senseisqueegee.co.nz: should land on /thanks and email Barney
 - [ ] **Google Business Profile** — set up for Sensei Squeegee, then link in footer
 - [ ] **Analytics** (optional) — new GA4/GTM property if wanted; `index.html` has a TODO marker
 - [ ] **Social accounts** (optional) — TODO marker in `Footer.jsx`

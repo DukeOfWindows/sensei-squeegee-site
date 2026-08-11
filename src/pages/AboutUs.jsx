@@ -24,7 +24,7 @@ export default function AboutUs() {
       <HelmetSEO
         pageTitle="About | Sensei Squeegee — Hamilton Window Cleaning"
         metaDescription="Meet the sensei behind Sensei Squeegee — residential window cleaning servicing Ngāruawāhia to Te Awamutu, run with dojo-grade discipline."
-        canonicalUrl="https://senseisqueegee.co.nz/about" // TODO: confirm domain
+        canonicalUrl="https://senseisqueegee.co.nz/about"
       />
 
       <Navbar />

@@ -1,11 +1,6 @@
 import React, { useState } from 'react';
 
-// TODO — BASIN FORM ENDPOINT PLACEHOLDER:
-// Create a NEW Basin account/form for Sensei Squeegee (https://usebasin.com), then replace
-// the action URL below with the new form endpoint. The form will NOT work until this is done.
-const BASIN_ENDPOINT = 'https://usebasin.com/f/REPLACE_WITH_NEW_BASIN_FORM_ID';
-
-// TODO: Update the _redirect value once the real domain is confirmed (placeholder below).
+const BASIN_ENDPOINT = 'https://usebasin.com/f/ceb092f440ab';
 const THANKS_REDIRECT = 'https://senseisqueegee.co.nz/thanks';
 
 export default function ContactForm() {

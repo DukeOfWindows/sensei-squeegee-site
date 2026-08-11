@@ -1,9 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 
-// TODO: Replace the placeholder domain (senseisqueegee.co.nz) everywhere once the real domain is confirmed.
-// TODO: LocalBusiness structured data was deliberately removed — re-add it here only once the real
-// business details exist (phone, email, address/area, opening hours, Google Business Profile, socials).
+// TODO: LocalBusiness structured data was deliberately removed — re-add it here once the
+// remaining business details exist (opening hours, Google Business Profile, socials).
 
 export default function HelmetSEO({
   pageTitle,

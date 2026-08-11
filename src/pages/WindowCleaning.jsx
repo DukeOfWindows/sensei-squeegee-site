@@ -93,7 +93,7 @@ export default function WindowCleaning() {
       <HelmetSEO
         pageTitle="Window Cleaning Hamilton | Interior & Exterior | Sensei Squeegee"
         metaDescription="Interior and exterior residential window cleaning, servicing Ngāruawāhia to Te Awamutu. Streak-free results from your local window cleaning sensei."
-        canonicalUrl="https://senseisqueegee.co.nz/window-cleaning" // TODO: confirm domain
+        canonicalUrl="https://senseisqueegee.co.nz/window-cleaning"
       />
 
       <Navbar />
